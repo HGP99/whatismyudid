@@ -15,6 +15,9 @@ const sslRedirect = require('heroku-ssl-redirect').default
 
 var app = express();
 
+var env = process.env.NODE_ENV || 'production';
+var isProd = env == 'production';
+
 // all environments
 app.set('port', process.env.PORT || 3001);
 app.set('views', __dirname + '/views');
@@ -26,13 +29,16 @@ app.use(express.raw({
   'type' : 'application/pkcs7-signature'
 }))
 
-app.use(helmet({
-  hsts : {
-    preload: true,
-    maxAge: 31536000,
-    includeSubDomains: true
-  }
-}))
+if (isProd) {
+  app.use(helmet({
+    hsts : {
+      preload: true,
+      maxAge: 31536000,
+      includeSubDomains: true
+    }
+  }));
+}
+
 app.use(sslRedirect(['production'], 301));
 app.get('/', routes.index);
 
