@@ -1,10 +1,10 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "tobic-getudid",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "build": "cd mkmobileconfig && npm i && ./loadkeys.sh && node mkmobileconfig.js && ./sign.sh && ./copyconfig.sh"
+    "build": "cd mkmobileconfig && loadkeys.sh && node mkmobileconfig.js && sign.sh && copyconfig.sh"
   },
   "dependencies": {
     "cookie-parser": "1.4.5",
@@ -20,6 +20,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chedabob/whatismyudid"
+    "url": "https://github.com/HGP99/whatismyudid"
   }
 }
