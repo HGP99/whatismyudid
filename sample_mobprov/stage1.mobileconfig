@@ -12,15 +12,15 @@
         </array>
     </dict>
     <key>PayloadOrganization</key>
-    <string>com.mattm</string>
+    <string>com.tobic</string>
     <key>PayloadDisplayName</key>
-    <string>udid.mattmalone.app</string>
+    <string>udid.TOBIC.app</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
     <key>PayloadUUID</key>
     <string>0092ebbc-8bd6-4642-b24c-e8bd1ba85716</string>
     <key>PayloadIdentifier</key>
-    <string>com.mattm.profile-service</string>
+    <string>com.tobic.getudid</string>
     <key>PayloadDescription</key>
     <string>This temporary profile will be used to find and display your current device's UDID.</string>
     <key>PayloadType</key>
